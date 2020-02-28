@@ -2,7 +2,7 @@
 # Contributor: Greg Fitzgerald <greg at gregf dot org>
 
 pkgname=xcape-git
-pkgver=1.1.r31.g6262889
+pkgver=99999.1.1.r32.g9c2543b
 pkgrel=1
 epoch=1
 pkgdesc="Use modifier pressed/released solo as another key/chord, e.g. CapsLock > Escape"
@@ -18,7 +18,7 @@ sha256sums=('SKIP')
 
 pkgver() {
   cd xcape
-  git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+  echo 99999.$(git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g')
 }
 
 build() {
